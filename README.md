@@ -2,15 +2,11 @@
 
 Creates synthetic digital elevation models (DEMs) from point data.
 
-
-
 Prerequisites:
 
 - [GDAL](https://www.gdal.org/) (I installed mine through installing [QGIS](https://www.qgis.org/en/site/forusers/download), which might be easier)
 
 - Python 3
-
-
 
 Usage:
 
@@ -22,11 +18,9 @@ Usage:
 
 4. The resulting `dem.tiff` should be readable by QGIS/ArcGIS. Some programs may take a .png instead; this can be done using [gdal_translate](https://www.gdal.org/gdal_translate.html) with something like (`gdal_translate -of PNG -scale -outsize 120 120 dem.tiff dem.png` )
 
-
-
 Further steps:
 
-- To 3D print, run a .png through [heightmap2stl](https://sourceforge.net/projects/heightmap2stl/)
+- To 3D print, run a .png through [heightmap2stl](https://sourceforge.net/projects/heightmap2stl/) (using grayfix.py may also be needed to fix grayscale log values, e.g. `python grayfix.py dem.png dem_fix.png`)
 
 - Import a voxel version to [MagicaVoxel](https://ephtracy.github.io/) with [FileToVox](https://github.com/Zarbuz/FileToVox)
 
